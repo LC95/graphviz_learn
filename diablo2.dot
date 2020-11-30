@@ -3,26 +3,27 @@ digraph {
     centre[shape="box", style="filled",label="unbreakable",color="red",fillcolor="yellow"]
     ranksep=3
     asn,dru,bar,ama,pal,nec,sor[shape="hexagon",style="filled"]
+    {
+        edge[weight=1,style="invis"]
 
-{
-edge[weight=1,style="invis"]
-
-    asn->centre
-    dru->centre
-    bar->centre
-    ama->centre
-    pal->centre
-    nec->centre
-    sor->centre
-}
-{
-    edge[weight=0,style="dashed",dir=none];
-    asn->bar;
-    dru->sor;
-    dru->ama;
-    bar->pal;
-    nec->ama;
-    nec->asn;
-    sor->pal;
+            asn->centre
+            dru->centre
+            bar->centre
+            ama->centre
+            pal->centre
+            nec->centre
+            sor->centre
+    }
+    {
+        edge[weight=0,style="dashed",dir=none];
+        asn->bar;
+        dru->sor;
+        dru->ama;
+        bar->pal;
+        nec->ama;
+        nec->asn;
+        sor->pal;
     }
 }
+
+//twopi -Tsvg -o diablo2.svg
